@@ -16,6 +16,7 @@ import com.luv2code.ecommerce.service.CheckoutService;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 
+// comments
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
