@@ -80,6 +80,7 @@ public class CheckoutServiceImpl implements CheckoutService {
         return new PurchaseResponse(orderTrackingNumber);
     }
 
+    // comments
     private String generateOrderTrackingNumber() {
 
         // generate a random UUID number (UUID version-4)
