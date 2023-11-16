@@ -38,6 +38,7 @@ public class CheckoutController {
         return purchaseResponse;
     }
 
+    // comments
     @PostMapping("/payment-intent")
     public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentInfo paymentInfo) throws StripeException {
 
