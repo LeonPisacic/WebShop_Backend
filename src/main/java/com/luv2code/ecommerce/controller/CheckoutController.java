@@ -21,10 +21,12 @@ import com.stripe.model.PaymentIntent;
 @RequestMapping("/api/checkout")
 public class CheckoutController {
 
+    // comments
     private Logger logger = Logger.getLogger(getClass().getName());
 
     private CheckoutService checkoutService;
 
+    // comments
     public CheckoutController(CheckoutService checkoutService) {
         this.checkoutService = checkoutService;
     }
@@ -41,10 +43,12 @@ public class CheckoutController {
 
         logger.info("paymentinfo.amount " + paymentInfo.getAmount());
 
+        // comments
         PaymentIntent paymentIntent = checkoutService.createPaymentIntent(paymentInfo);
 
         String paymentString = paymentIntent.toJson();
 
+        // comments
         return new ResponseEntity<>(paymentString, HttpStatus.OK);
     }
 
