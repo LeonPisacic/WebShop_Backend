@@ -11,6 +11,7 @@ import com.luv2code.ecommerce.entity.State;
 @RepositoryRestResource()
 public interface StateRepository extends JpaRepository<State, Integer> {
 
+    // comments
     List<State> findByCountryCode(@Param("code") String code); // this will allow to search state for specific country
                                                                // code
 

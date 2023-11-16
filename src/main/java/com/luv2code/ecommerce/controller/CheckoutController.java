@@ -16,14 +16,17 @@ import com.luv2code.ecommerce.service.CheckoutService;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
 
+// comments
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
 
+    // comments
     private Logger logger = Logger.getLogger(getClass().getName());
 
     private CheckoutService checkoutService;
 
+    // comments
     public CheckoutController(CheckoutService checkoutService) {
         this.checkoutService = checkoutService;
     }
@@ -35,15 +38,18 @@ public class CheckoutController {
         return purchaseResponse;
     }
 
+    // comments
     @PostMapping("/payment-intent")
     public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentInfo paymentInfo) throws StripeException {
 
         logger.info("paymentinfo.amount " + paymentInfo.getAmount());
 
+        // comments
         PaymentIntent paymentIntent = checkoutService.createPaymentIntent(paymentInfo);
 
         String paymentString = paymentIntent.toJson();
 
+        // comments
         return new ResponseEntity<>(paymentString, HttpStatus.OK);
     }
 

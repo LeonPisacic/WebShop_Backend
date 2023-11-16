@@ -11,6 +11,7 @@ import com.luv2code.ecommerce.entity.Order;
 @RepositoryRestResource
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
+    // comments
     // behind the scene, spring will create a qeury based on the mathod's name
     Page<Order> findByCustomerEmailOrderByDateCreatedDesc(@Param("email") String email, Pageable pageable);
 

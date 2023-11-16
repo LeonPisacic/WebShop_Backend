@@ -40,6 +40,7 @@ public class CheckoutServiceImpl implements CheckoutService {
     @Transactional
     public PurchaseResponse placeOrder(Purchase purchase) { // method for placing the order
 
+        // comments
         // retrive the order info dto
         Order order = purchase.getOrder();
 
@@ -79,6 +80,7 @@ public class CheckoutServiceImpl implements CheckoutService {
         return new PurchaseResponse(orderTrackingNumber);
     }
 
+    // comments
     private String generateOrderTrackingNumber() {
 
         // generate a random UUID number (UUID version-4)
