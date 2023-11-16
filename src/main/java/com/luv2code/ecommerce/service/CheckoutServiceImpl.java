@@ -40,6 +40,7 @@ public class CheckoutServiceImpl implements CheckoutService {
     @Transactional
     public PurchaseResponse placeOrder(Purchase purchase) { // method for placing the order
 
+        // comments
         // retrive the order info dto
         Order order = purchase.getOrder();
 
